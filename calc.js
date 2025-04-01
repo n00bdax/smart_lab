@@ -32,12 +32,12 @@ function appendNumber(number) {
 //Operator hinzufügen
 function appendOperation(operation) {
     if (currentInput === '') return; // -> wenn leer dann wird nichts gemacht
-
+    
     if (previousInput !== '') {
-        calculate();
+        calculate(); 
     } // -> __________
 
-    currentOperation = operation;
+    currentOperation = operation;  
     previousInput = currentInput; // tausch von prev und current
     currentInput = '';
     document.getElementById('display').value = `${previousInput} ${currentOperation}`;
@@ -49,32 +49,29 @@ function calculate() {
     //   || = oder
     if (previousInput === '' || currentInput === '') return; //-> wenn prev oder current leer ist wird nichts gemacht
 
-    let result;
+    let result; 
     let prev = parseFloat(previousInput);   //liest vorherige Ziffern als Zahl 
     let current = parseFloat(currentInput); //liest akutuelle Ziffern als Zahl
 
     switch (currentOperation) {
         case '+':
-            result = prev + current;
+            //result = ___ + ___;
             break;
         case '-':
-            result = prev - current;
+            //result = ___ __ ___;
             break;
         case '*':
-            result = prev * current;
+            //result = _________ ;
             break;
         case '/':
-            if (current === ____) {
+            if (current === ____ ) {
                 alert("Cannot divide by zero");
                 return;
             }
-            result = prev / current;
+            //result = ___ __ ___;
             break;
         default:
             return;
-        case '^':
-            result = prev ^ current;
-            break;
     }
 
     currentInput = result.toString(); // result wird von zahl zu einem text bzw. anreihung von ziffern umgewandelt und wird zum current
