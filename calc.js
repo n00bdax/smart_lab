@@ -16,12 +16,14 @@ function appendNumber(number) {
         return;
     }
     if (currentInput === '' && number === '.') {
-        number = '0.';
+        currentInput = '0.';
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`
         return;
     }
     if (number === 'pi') {
-        currentInput = Math.PI.toString();
-        return
+        currentInput = "3.14159";
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`
+        return;
     }
     currentInput += number;
     document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;

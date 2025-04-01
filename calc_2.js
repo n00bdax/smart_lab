@@ -12,15 +12,20 @@ let previousInput = '';
 
 //Nummern hinzufügen
 function appendNumber(number) {
-    if (currentInput.includes('.') && number === ) {
+    // comma und comma hinzufügen
+    if (currentInput.includes('.') && number === ___) {
         return;
     }
-    if (currentInput === '' && number === '.') {
-        number = '0.';
+    // comma ohne zahl davor
+    if (currentInput === ___ && number === ___ ) {
+        currentInput = '___';
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`
         return;
     }
+    // pi überschreibt aktuelle zahl
     if (number === 'pi') {
-        currentInput = Math.PI.toString();
+        currentInput = '___';
+        document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`
         return
     }
     currentInput += number;
