@@ -12,7 +12,7 @@ let previousInput = '';
 
 //Nummern hinzufügen
 function appendNumber(number) {
-    if (currentInput.includes('.') && number === '.') {
+    if (currentInput.includes('.') && number === ) {
         return;
     }
     if (currentInput === '' && number === '.') {
