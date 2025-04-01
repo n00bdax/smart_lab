@@ -78,6 +78,9 @@ function calculate() {
         case '^':
             result = prev ^ current;
             break;
+        case '%':
+            _______;
+            break;
     }
 
     currentInput = result.toString(); // result wird von zahl zu einem text bzw. anreihung von ziffern umgewandelt und wird zum current
